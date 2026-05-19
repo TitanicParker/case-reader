@@ -15,6 +15,8 @@ The site is organized around a sequence-based rule:
 - [Main public page](index.html)
 - [Sharpened case theory](SHARPENED_CASE_THEORY.md)
 - [Essay collection landing page](essays/index.html)
+- [Top-level essay index](essays.html)
+- [Direct Essay 12 fallback](essay-12.html)
 - [Evidence register](EVIDENCE_REGISTER.md)
 
 ## Sharpened case theory
@@ -40,6 +42,7 @@ Read the full theory here: [SHARPENED_CASE_THEORY.md](SHARPENED_CASE_THEORY.md)
 9. [The System Did Not Miss the Red Flags. It Neutralised Them.](essays/system-neutralised-red-flags.html)
 10. [Finality Before Inquiry](essays/finality-before-inquiry.html)
 11. [The Drift from iPD Back to iPD](essays/drift-from-ipd-back-to-ipd.html)
+12. [The Defence Has to Fight Its Own Documents](essays/defence-has-to-fight-its-own-documents.html)
 
 ## Current status
 
@@ -56,6 +59,8 @@ The visual system uses a restrained U.S. civic/government style: clear hierarchy
 - `index.html` — public homepage with the case structure and essay links.
 - `styles.css` — federal-style visual system and responsive layout.
 - `SHARPENED_CASE_THEORY.md` — condensed case theory and expert framing.
+- `essays.html` — top-level essay index.
+- `essay-12.html` — direct fallback page for Essay 12.
 - `essays/index.html` — essay collection landing page.
 - `essays/*.html` — standalone essay pages.
 - `EVIDENCE_REGISTER.md` — inventory of document classes, publication status, redaction cautions, and reading order.
