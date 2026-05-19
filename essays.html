@@ -5,7 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Essay Collection | Case Reader</title>
   <meta name="description" content="Essay collection for the Case Reader project.">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
+  <style>
+    .essay-list {
+      max-width: 980px;
+      margin: 1.5rem 0 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: essay;
+    }
+    .essay-list li {
+      counter-increment: essay;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      margin: 0 0 1.35rem;
+    }
+    .essay-list li::before {
+      content: counter(essay);
+      flex: 0 0 2.35rem;
+      display: grid;
+      width: 2.35rem;
+      height: 2.35rem;
+      place-items: center;
+      border-radius: 50%;
+      background: #1a4480;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .essay-entry {
+      flex: 1 1 auto;
+      min-width: 0;
+      padding-top: 0.18rem;
+    }
+    .essay-entry strong {
+      display: block;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.35;
+    }
+    .essay-entry span {
+      display: block;
+      max-width: 760px;
+      margin-top: 0.3rem;
+      color: #454545;
+      line-height: 1.55;
+    }
+    @media (max-width: 520px) {
+      .essay-list li { gap: 0.75rem; }
+      .essay-list li::before { flex-basis: 2rem; width: 2rem; height: 2rem; }
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -48,18 +99,18 @@
       <section id="essays" class="panel">
         <p class="kicker">Secondary reading path</p>
         <h2>Essays</h2>
-        <ol class="timeline">
-          <li><strong><a href="essays/document-that-knew-too-much.html">The Document That Knew Too Much</a></strong><span>On the discharge summary as the central artefact.</span></li>
-          <li><strong><a href="essays/levodopa-certainty.html">If Levodopa Was Withheld, Certainty Had to Be Withheld Too</a></strong><span>On therapeutic caution versus diagnostic discrimination.</span></li>
-          <li><strong><a href="essays/feet-were-not-incidental.html">The Feet Were Not Incidental</a></strong><span>On the GP referral, foot-centred entry, dystonic gait, and podiatry displacement.</span></li>
-          <li><strong><a href="essays/disclaimer-without-consequence.html">Disclaimer Without Consequence</a></strong><span>On non-movement-disorder status as a governance trigger.</span></li>
-          <li><strong><a href="essays/protest-could-not-be-recorded.html">The Protest That Could Not Be Recorded</a></strong><span>On the bedside protest and omission from the discharge record.</span></li>
-          <li><strong><a href="essays/statutory-hardening.html">The Statutory Hardening of a Provisional Hypothesis</a></strong><span>On LTI certification as administrative hardening.</span></li>
-          <li><strong><a href="essays/confirmation-after-closure.html">Confirmation After Closure</a></strong><span>On the DAT scan addendum as retrospective reinforcement.</span></li>
-          <li><strong><a href="essays/preserved-cognition-manufactured-ignorance.html">Preserved Cognition, Manufactured Ignorance</a></strong><span>On cognitive capacity and withheld diagnostic architecture.</span></li>
-          <li><strong><a href="essays/system-neutralised-red-flags.html">The System Did Not Miss the Red Flags. It Neutralised Them.</a></strong><span>On warning signs being recorded but made non-governing.</span></li>
-          <li><strong><a href="essays/finality-before-inquiry.html">Finality Before Inquiry</a></strong><span>The master ordering essay.</span></li>
-          <li><strong><a href="essays/drift-from-ipd-back-to-ipd.html">The Drift from iPD Back to iPD</a></strong><span>On explanatory capture and the iPD frame.</span></li>
+        <ol class="essay-list">
+          <li><div class="essay-entry"><strong><a href="essays/document-that-knew-too-much.html">The Document That Knew Too Much</a></strong><span>On the discharge summary as the central artefact.</span></div></li>
+          <li><div class="essay-entry"><strong><a href="essays/levodopa-certainty.html">If Levodopa Was Withheld, Certainty Had to Be Withheld Too</a></strong><span>On therapeutic caution versus diagnostic discrimination.</span></div></li>
+          <li><div class="essay-entry"><strong><a href="essays/feet-were-not-incidental.html">The Feet Were Not Incidental</a></strong><span>On the GP referral, foot-centred entry, dystonic gait, and podiatry displacement.</span></div></li>
+          <li><div class="essay-entry"><strong><a href="essays/disclaimer-without-consequence.html">Disclaimer Without Consequence</a></strong><span>On non-movement-disorder status as a governance trigger.</span></div></li>
+          <li><div class="essay-entry"><strong><a href="essays/protest-could-not-be-recorded.html">The Protest That Could Not Be Recorded</a></strong><span>On the bedside protest and omission from the discharge record.</span></div></li>
+          <li><div class="essay-entry"><strong><a href="essays/statutory-hardening.html">The Statutory Hardening of a Provisional Hypothesis</a></strong><span>On LTI certification as administrative hardening.</span></div></li>
+          <li><div class="essay-entry"><strong><a href="essays/confirmation-after-closure.html">Confirmation After Closure</a></strong><span>On the DAT scan addendum as retrospective reinforcement.</span></div></li>
+          <li><div class="essay-entry"><strong><a href="essays/preserved-cognition-manufactured-ignorance.html">Preserved Cognition, Manufactured Ignorance</a></strong><span>On cognitive capacity and withheld diagnostic architecture.</span></div></li>
+          <li><div class="essay-entry"><strong><a href="essays/system-neutralised-red-flags.html">The System Did Not Miss the Red Flags. It Neutralised Them.</a></strong><span>On warning signs being recorded but made non-governing.</span></div></li>
+          <li><div class="essay-entry"><strong><a href="essays/finality-before-inquiry.html">Finality Before Inquiry</a></strong><span>The master ordering essay.</span></div></li>
+          <li><div class="essay-entry"><strong><a href="essays/drift-from-ipd-back-to-ipd.html">The Drift from iPD Back to iPD</a></strong><span>On explanatory capture and the iPD frame.</span></div></li>
         </ol>
       </section>
     </div>
