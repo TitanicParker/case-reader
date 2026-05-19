@@ -20,6 +20,7 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -28,6 +29,7 @@ body {
   background: var(--gray-050);
   font-family: Georgia, "Times New Roman", serif;
   line-height: 1.65;
+  overflow-x: hidden;
 }
 
 body::selection {
@@ -85,6 +87,7 @@ button:focus {
 
 .flag-mark {
   display: inline-block;
+  flex: 0 0 auto;
   width: 22px;
   height: 14px;
   border-left: 8px solid var(--blue-800);
@@ -119,17 +122,18 @@ h3 {
   margin: 0;
   color: var(--blue-900);
   line-height: 1.15;
+  overflow-wrap: anywhere;
 }
 
 h1 {
   max-width: 900px;
-  font-size: clamp(2.25rem, 6vw, 4.85rem);
+  font-size: clamp(2.15rem, 6vw, 4.85rem);
   letter-spacing: -0.045em;
 }
 
 h2 {
   margin-bottom: 1.15rem;
-  font-size: clamp(1.75rem, 3vw, 2.65rem);
+  font-size: clamp(1.65rem, 3vw, 2.65rem);
   letter-spacing: -0.025em;
 }
 
@@ -144,7 +148,7 @@ h3 {
   max-width: 830px;
   margin: 1.35rem 0 0;
   color: var(--gray-700);
-  font-size: clamp(1.15rem, 2vw, 1.38rem);
+  font-size: clamp(1.08rem, 2vw, 1.38rem);
 }
 
 .rule-card {
@@ -159,7 +163,7 @@ h3 {
 .rule-card strong {
   display: block;
   color: var(--blue-900);
-  font-size: clamp(1.35rem, 3vw, 2rem);
+  font-size: clamp(1.25rem, 3vw, 2rem);
   line-height: 1.25;
 }
 
@@ -176,6 +180,8 @@ h3 {
   gap: 0.35rem;
   overflow-x: auto;
   padding-block: 0.55rem;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
 }
 
 .nav-grid a {
@@ -187,6 +193,7 @@ h3 {
   font-size: 0.9rem;
   font-weight: 700;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .nav-grid a:hover {
@@ -396,37 +403,181 @@ h3 {
 }
 
 @media (max-width: 860px) {
+  .container {
+    width: min(100% - 28px, var(--max));
+  }
+
+  .hero {
+    padding: 36px 0 30px;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 9vw, 3rem);
+    letter-spacing: -0.035em;
+  }
+
+  h2 {
+    font-size: clamp(1.55rem, 6vw, 2.1rem);
+  }
+
   .layout {
-    grid-template-columns: 1fr;
+    display: block;
+    padding: 22px 0 40px;
+  }
+
+  .sidebar {
+    margin-bottom: 16px;
   }
 
   .sticky-panel {
     position: static;
   }
 
+  .panel {
+    padding: 1.15rem;
+    margin-bottom: 16px;
+  }
+
+  .panel p {
+    max-width: none;
+    font-size: 1.02rem;
+    line-height: 1.62;
+  }
+
   .split-card,
   .triad {
     grid-template-columns: 1fr;
   }
+
+  .rule-card {
+    margin-top: 1.4rem;
+    padding: 1rem;
+    border-left-width: 6px;
+  }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 600px) {
   .container {
-    width: min(100% - 24px, var(--max));
+    width: min(100% - 22px, var(--max));
+  }
+
+  .topbar-inner {
+    min-height: 36px;
+    font-size: 0.78rem;
+  }
+
+  .hero {
+    padding: 28px 0 24px;
+  }
+
+  h1 {
+    font-size: clamp(1.85rem, 10vw, 2.55rem);
+    line-height: 1.05;
+  }
+
+  h2 {
+    font-size: clamp(1.45rem, 7vw, 1.9rem);
+    line-height: 1.12;
+  }
+
+  .lede {
+    margin-top: 1rem;
+    font-size: 1.02rem;
+    line-height: 1.55;
+  }
+
+  .section-nav {
+    position: static;
+  }
+
+  .nav-grid {
+    gap: 0.25rem;
+    padding: 0.5rem 0;
+  }
+
+  .nav-grid a {
+    padding: 0.55rem 0.65rem;
+    font-size: 0.82rem;
+  }
+
+  .sticky-panel {
+    padding: 0.9rem;
+    font-size: 0.9rem;
   }
 
   .panel {
     padding: 1rem;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .callout,
+  .question-box,
+  .principle {
+    margin: 1rem 0;
+    padding: 0.9rem;
+    border-left-width: 5px;
+  }
+
+  .check-list,
+  .numbered-list {
+    padding-left: 1.2rem;
+  }
+
+  .timeline {
+    max-width: none;
   }
 
   .timeline li {
-    grid-template-columns: 2.5rem minmax(0, 1fr);
+    grid-template-columns: 2.25rem minmax(0, 1fr);
     column-gap: 0.75rem;
+    margin-bottom: 1rem;
   }
 
   .timeline li::before {
     width: 2rem;
     height: 2rem;
+    font-size: 0.9rem;
+  }
+
+  .timeline span {
+    max-width: none;
+    font-size: 0.96rem;
+    line-height: 1.5;
+  }
+
+  .site-footer {
+    padding: 22px 0;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    width: min(100% - 18px, var(--max));
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  .panel p {
+    font-size: 1rem;
+  }
+
+  .timeline li {
+    grid-template-columns: 2rem minmax(0, 1fr);
+    column-gap: 0.6rem;
+  }
+
+  .timeline li::before {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.8rem;
   }
 }
 
