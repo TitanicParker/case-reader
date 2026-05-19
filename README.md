@@ -10,6 +10,12 @@ The site is organized around a sequence-based rule:
 
 > Finality must follow inquiry, not precede it.
 
+## Current status
+
+This is a strong version 1 narrative and design package. It includes the public case structure, the core argument, expert-question framing, and a document reading order.
+
+The repository does **not** yet contain the underlying primary records. Those should be added only after redaction review.
+
 ## Design direction
 
 The visual system uses a restrained U.S. civic/government style: clear hierarchy, high contrast, limited color, formal typography, accessible navigation, and evidence-first page structure. The site does not impersonate a real government agency.
@@ -18,6 +24,19 @@ The visual system uses a restrained U.S. civic/government style: clear hierarchy
 
 - `index.html` — single-page public site with the full case structure.
 - `styles.css` — federal-style visual system and responsive layout.
+- `EVIDENCE_REGISTER.md` — inventory of document classes, publication status, redaction cautions, and reading order.
+
+## Evidence handling
+
+The first public version can operate as a reading aid without publishing raw records. Primary records should be added later with evidence-status labels and redaction review.
+
+Recommended labels:
+
+- Primary record
+- Correspondence
+- Interpretive companion
+- Pending upload
+- Redaction required
 
 ## Editorial note
 
