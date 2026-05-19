@@ -13,8 +13,19 @@ The site is organized around a sequence-based rule:
 ## Open the site
 
 - [Main public page](index.html)
+- [Sharpened case theory](SHARPENED_CASE_THEORY.md)
 - [Essay collection landing page](essays/index.html)
 - [Evidence register](EVIDENCE_REGISTER.md)
+
+## Sharpened case theory
+
+The case is framed as an ordering breach, not a diagnostic hindsight complaint.
+
+The central proposition is:
+
+> The record did not merely contain uncertainty. It documented uncertainty while simultaneously converting one hypothesis into administrative fact.
+
+Read the full theory here: [SHARPENED_CASE_THEORY.md](SHARPENED_CASE_THEORY.md)
 
 ## Essay collection
 
@@ -32,7 +43,7 @@ The site is organized around a sequence-based rule:
 
 ## Current status
 
-This is a strong version 1 narrative and design package. It includes the public case structure, the core argument, expert-question framing, essay collection, and document reading order.
+This is a strong version 1 narrative and design package. It includes the public case structure, the core argument, sharpened case theory, expert-question framing, essay collection, and document reading order.
 
 The repository does **not** yet contain the underlying primary records. Those should be added only after redaction review.
 
@@ -44,6 +55,7 @@ The visual system uses a restrained U.S. civic/government style: clear hierarchy
 
 - `index.html` — public homepage with the case structure and essay links.
 - `styles.css` — federal-style visual system and responsive layout.
+- `SHARPENED_CASE_THEORY.md` — condensed case theory and expert framing.
 - `essays/index.html` — essay collection landing page.
 - `essays/*.html` — standalone essay pages.
 - `EVIDENCE_REGISTER.md` — inventory of document classes, publication status, redaction cautions, and reading order.
